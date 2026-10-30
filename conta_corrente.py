@@ -3,6 +3,10 @@ from conta_bancaria import ContaBancaria
 class ContaCorrente(ContaBancaria):
     def __init__(self, numero_conta, cliente, limite):
         super().__init__(numero_conta, cliente)
+
+        if limite < 0:
+            raise ValueError("O limite não pode ser negativo.")
+        
         self._limite = limite
 
     def sacar(self, valor):

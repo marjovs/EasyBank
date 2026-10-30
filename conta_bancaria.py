@@ -6,7 +6,7 @@ class ContaBancaria:
 
     @property
     def saldo(self):
-        return self._cliente
+        return self._saldo
     
     @property
     def cliente(self):

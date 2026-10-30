@@ -11,7 +11,7 @@ class ContaPoupanca(ContaBancaria):
             print(f"Saque de R${valor:.2f} realizado com sucesso!")
 
     def render_juros(self, taxa):
-        if taxa > 0:
+        if taxa >= 0:
             juros = self._saldo * taxa
             self._saldo += juros
             print(f"Juros de R${juros:.2f} aplicados!")
